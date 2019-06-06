@@ -19,7 +19,7 @@
   <title>Journey Demo</title>
   <!-- <button type="button" onclick="branch.closeJourney(function(err) { console.log(err); });">Click Me!</button> -->
   <img id="bg" width="100%" height="100%"  src="" alt="">
-  <iframe id="page" width="100%" height="100%" src=""></iframe>
+  <iframe id="page" width="100%" src=""></iframe>
 
 
   <script>
@@ -34,7 +34,7 @@
     });
 
     branch.data(function(err, data) {
-      console.log(err, data); 
+      console.log(err, data);
       console.log(data.referring_link)
     });
 
@@ -69,8 +69,8 @@
           document.getElementById("bg").style.display = "none";
         }
       }
-   
-   
+
+
     branch.setIdentity('nma@branch.io');
 
     branch.logEvent(
