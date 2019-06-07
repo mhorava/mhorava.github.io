@@ -2,16 +2,7 @@
 <html>
 <head>
 	<style>
-    body, html
-    {
-        margin: 0; padding: 0; height: 100%; overflow: hidden;
-        overflow: hidden !important;
-        position: fixed !important;
-    }
 
-    branch-banner-no-scroll{
-      overflow: hidden;
-    }
 
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -78,6 +69,11 @@
      { metadata: 'web_event' },
      function(err) { console.log(err); }
     );
+
+    var listener = function(event, data) { console.log(event, data); }
+
+    // Specify an event to listen for
+    branch.addListener('willShowJourney', listener);
 
 
   </script>
